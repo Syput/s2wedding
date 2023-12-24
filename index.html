@@ -509,7 +509,7 @@
       body: data,
     })
     .then(() => {
-      alert("Konfirmasi krhadiran berhasil terkirim!");
+      alert("Konfirmasi kehadiran berhasil terkirim!");
     })
   });
 });
@@ -519,9 +519,19 @@
   
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    let nama = urlParams.get('n') || '';
-    const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+    let nama = urlParams.get('to') || '';
+    let pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
     const tundang = urlParams.get('t') || '';
+
+    if(pronoun=='1'){
+    pronoun='Bapak';  
+    }else if(pronoun=='2'){
+      pronoun='Ibu';
+    }else if(pronoun=='3'){
+      pronoun='Saudara/i';
+    }else{
+      pronon=='Bapak/Ibu/Saudara/i';
+    }
     
     const namaContainer = document.querySelector('.hero h4 span');
     namafix=nama.replace(/_/g,' ');
