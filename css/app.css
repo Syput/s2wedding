@@ -278,8 +278,17 @@ position: relative;
     }
 
     .timeline li .timeline-panel{
-        width: 65%;
+        width: 60%;
+        font-size:0.6rem;
         transform: translateX(-20px);
+    }
+
+    .timeline li .timeline-panel h3{
+        font-size:0.8rem;
+    }
+
+    .timeline li .timeline-panel span{
+        font-size:0.4rem;
     }   
 
     .timeline li .timeline-panel::before{
