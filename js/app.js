@@ -184,6 +184,15 @@ const util = (() => {
         await animation();
     };
 
+    const duar = async (button) => {
+        await confetti({
+            origin: { y: 0.8 },
+            zIndex: 1057
+        });
+        await session.check();
+        await animation();
+    };
+
     const show = () => {
         tamu();
         opacity('loading');
@@ -198,7 +207,8 @@ const util = (() => {
         salin,
         escapeHtml,
         opacity,
-        show
+        show,
+        duar
     };
 })();
 
