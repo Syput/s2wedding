@@ -597,8 +597,10 @@
     
     const namaContainer = document.querySelector('#tamu');
     namafix=nama.replace(/_/g,' ');
-    namaContainer.innerText=`${pronoun} \n <span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/,',');
+  //  namaContainer.innerText=`${pronoun} \n <span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/,',');
     //console.log(nama);
+      namaContainer.innerHTML = `${pronoun}<br><span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/, ',');
+
 
     if(tundang==''){
       document.querySelector('.gifts').style.display='none';
