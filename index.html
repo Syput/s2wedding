@@ -597,7 +597,7 @@
     
     const namaContainer = document.querySelector('#tamu');
     namafix=nama.replace(/_/g,' ');
-    namaContainer.innerText=`${pronoun} \n ${namafix}`.replace(/ ,$/,',');
+    namaContainer.innerText=`${pronoun} \n <span style='font-size: 1.2em;'>${namafix}</span>`.replace(/ ,$/,',');
     //console.log(nama);
 
     if(tundang==''){
